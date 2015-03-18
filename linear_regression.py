@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import statsmodels.api as sm
 
-#loansData = pd.read_csv('https://spark-public.s3.amazonaws.com/dataanalysis/loansData.csv')
-loansData = pd.read_csv('loan_data.csv')
+loansData = pd.read_csv('https://spark-public.s3.amazonaws.com/dataanalysis/loansData.csv')
+#loansData = pd.read_csv('loan_data.csv')
 print loansData['Interest.Rate'][0:5]
 
 clean_interest_rate = loansData['Interest.Rate'].map(lambda x: round(float(x.rstrip('%'))/100, 4))
